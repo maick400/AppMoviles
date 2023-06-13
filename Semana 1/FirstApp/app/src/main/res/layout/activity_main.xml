@@ -7,51 +7,125 @@
     tools:context=".MainActivity">
 
 
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:drawablePadding="12dp"
-        android:drawableStart="@drawable/baseline_person_24"
+    <TextView
+        android:id="@+id/nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="59dp"
-        android:layout_marginEnd="39dp"
-        android:layout_marginBottom="550dp"
-        android:ems="10"
-        android:hint="Usuario"
-        android:inputType="text" />
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="56dp"
+        android:text="Nombre" />
 
+    <TextView
+        android:id="@+id/apellido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="115dp"
+        android:text="apellido" />
+
+    <TextView
+        android:id="@+id/usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="181dp"
+        android:text="usuario" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="270dp"
+        android:text="Fecha" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
-        android:drawableStart="@drawable/baseline_lock_24"
-        android:drawablePadding="12dp"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:paddingVertical="12dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
-        android:layout_marginEnd="0dp"
-        android:ems="10"
-        android:hint="Contraseña"
-
-        android:inputType="textPassword" />
-
-    <Button
-        android:id="@+id/button"
+        android:id="@+id/ednombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="146dp"
-        android:layout_marginTop="252dp"
-        android:onClick="saludo"
-        android:text="Login" />
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name" />
 
+    <EditText
+        android:id="@+id/edapellido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="104dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name" />
+
+    <EditText
+        android:id="@+id/edusuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="174dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name" />
+
+    <RadioGroup
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="260dp" >
+
+        <RadioButton
+            android:id="@+id/rbtnMasculino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masculino" />
+
+        <RadioButton
+            android:id="@+id/rbtnFemenino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Femenino" />
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginBottom="242dp"
+        android:text="Switch" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="174dp"
+        android:layout_marginBottom="98dp"
+        android:onClick="btn_enviar"
+        android:text="Button" />
 </RelativeLayout>
