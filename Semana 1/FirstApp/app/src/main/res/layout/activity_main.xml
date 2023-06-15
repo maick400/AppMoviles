@@ -8,36 +8,6 @@
 
 
     <TextView
-        android:id="@+id/nombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="56dp"
-        android:text="Nombre" />
-
-    <TextView
-        android:id="@+id/apellido"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="115dp"
-        android:text="apellido" />
-
-    <TextView
-        android:id="@+id/usuario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="181dp"
-        android:text="usuario" />
-
-    <TextView
         android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,42 +19,47 @@
 
     <EditText
         android:id="@+id/ednombre"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+        android:drawablePadding="12dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="92dp"
         android:layout_marginTop="44dp"
+        android:drawableStart="@drawable/baseline_person_24"
         android:ems="10"
-        android:inputType="text"
-        android:text="Name" />
-
-    <EditText
-        android:id="@+id/edapellido"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="95dp"
-        android:layout_marginTop="104dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name" />
+        android:hint="Nombre"
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/edusuario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="412dp"
+        android:layout_height="59dp"
+        android:drawableStart="@drawable/baseline_person_24"
+        android:drawablePadding="12dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="96dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="104dp"
+        android:ems="10"
+        android:hint="Usuario"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="12dp"
+        android:drawableStart="@drawable/baseline_person_24"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="174dp"
         android:ems="10"
-        android:inputType="text"
-        android:text="Name" />
+        android:hint="Contraseña"
+        android:inputType="text" />
+
+
 
     <RadioGroup
         android:layout_width="300dp"
@@ -112,9 +87,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="120dp"
-        android:layout_marginBottom="242dp"
+        android:layout_marginStart="313dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="244dp"
         android:text="Switch" />
 
     <Button
