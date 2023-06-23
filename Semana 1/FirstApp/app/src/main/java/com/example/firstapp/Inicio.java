@@ -30,8 +30,8 @@ public class Inicio extends AppCompatActivity {
                 "Fecha:  " + fecha_nacimiento + "\n" +
                 "Ciudad:  " + ciudad + "\n" +
                 "Género:  " + genero + "\n" +
-                "Email:  " + cedula + "\n" +
-                "Teléfono:  " + cedula + "\n"
+                "Email:  " + correo + "\n" +
+                "Teléfono:  " + telefono + "\n"
                 );
 
 
