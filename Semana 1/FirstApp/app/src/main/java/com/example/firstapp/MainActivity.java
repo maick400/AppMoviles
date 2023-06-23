@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_bancos);
+
     }
     public void btn_enviar(View view){
         Toast.makeText(this.getApplicationContext(),"Has precionado el buton login", Toast.LENGTH_LONG).show();
