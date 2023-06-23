@@ -3,7 +3,10 @@ package com.example.firstapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,29 +29,49 @@ import WebService.Asynchtask;
 
 
 public class ListaBancos extends AppCompatActivity implements Asynchtask {
-    TextView txtBancos = (TextView) findViewById(R.id.txtBancos);
-
+    String token;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_bancos);
 
-        Map<String, String> datos = new HashMap<String, String>();
-       /* WebService ws= new
-                WebService("https://api-uat.kushkipagos.com/transfer-subscriptions/v1/bankList",
-                datos, ListaBancos.this, ListaBancos.this);
-        ws.execute("GET","Public-Merchant-Id","84e1d0de1fbf437e9779fd6a52a9ca18");
-*/
-        txtBancos.setText("Respuesta WS Lista de Bancos" );
-
-
-
 
     }
 
+
+    public  void  login (View view){
+        EditText tuser =   (EditText) findViewById(R.id.temail);
+        EditText tpass = (EditText) findViewById(R.id.tpass);
+
+        String user = tuser.getText().toString();
+        String pass = tpass.getText().toString();
+
+
+
+        Map<String, String> datos = new HashMap<String, String>();
+        datos.put("correo",user);
+        datos.put("clave",pass);
+
+        WebService ws= new
+                WebService("https://api.uealecpeterson.net/public/login",
+                datos, ListaBancos.this, ListaBancos.this);
+        ws.execute("POST");
+
+
+        Intent intent = new Intent(ListaBancos.this, home.class);
+        Bundle b  = new Bundle();
+        b.putString("TOKEN",token);
+        b.putString("USER",user);
+        b.putString("PASS",pass);
+
+
+        startActivity(intent);
+
+    }
+/*
     public  String getApi(){
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url ="https://api-uat.kushkipagos.com/transfer-subscriptions/v1/bankList";
+        String url ="http://www.google.com";
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
@@ -63,21 +86,15 @@ public class ListaBancos extends AppCompatActivity implements Asynchtask {
                     }
 
                 });
-    }
+    }*/
 
     @Override
     public void processFinish(String result) throws JSONException{
+        JSONObject jsonObject = new JSONObject(result);
+        String token  = jsonObject.getString("access_token");
+        this.token = token;
+        Toast.makeText(ListaBancos.this,  token, Toast.LENGTH_SHORT).show();
 
-        String lstBancos = "";
-        JSONArray JSONlista = new JSONArray(result);
-
-        for (int i = 0; i < JSONlista.length(); i++) {
-            JSONObject banco = JSONlista.getJSONObject(i);
-            lstBancos = lstBancos + "\n" +
-                    banco.getString("code").toString()+ "_" +
-            banco.getString("name").toString();
-        }
-        txtBancos.setText("Respuesta WS Lista de Bancos" + lstBancos);
     }
 
 }
